@@ -16,7 +16,8 @@ try:
         print(recvSocket.recv(2048))
         print('Answering back...')
         aleat = str(random.randrange(999999999))
-        recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
+        recvSocket.send(bytes(
+                        "HTTP/1.1 200 OK\r\n\r\n" +
                         "<html><body><h1>Hola.</h1>" +
                         "<a href=" + aleat + ">Dame otra</a>" +
                         "</body></html>" +
